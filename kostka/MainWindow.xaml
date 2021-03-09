@@ -1,0 +1,20 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kostka"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="kostka.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid x:Name="gridik" Width="500" HorizontalAlignment="Right" Background="DarkGray"/>
+        <Slider x:Name="sliderUhel" HorizontalAlignment="Left" Margin="18,113,0,0" VerticalAlignment="Top" Width="136" Minimum="-180" Maximum="180" ValueChanged="sliderUhel_ValueChanged" IsSnapToTickEnabled="True"/>
+        <Label Content="{Binding ElementName=sliderUhel, Path=Value, StringFormat={}{0:N0}}" HorizontalAlignment="Left" Margin="159,113,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbOsa" HorizontalAlignment="Left" Margin="69,259,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbOsa_SelectionChanged">
+            <System:String>x</System:String>
+            <System:String>y</System:String>
+            <System:String>z</System:String>
+        </ComboBox>
+    </Grid>
+</Window>
